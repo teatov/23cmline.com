@@ -18,3 +18,9 @@ import Layout from '@/layouts/Layout.astro';
     <CardContent>ass</CardContent>
   </Card>
 </Layout>
+
+<script>
+  const cowsayResponse = await fetch('https://api.23cmline.com/cowsay');
+  const cowsay = await cowsayResponse.text();
+  console.log(cowsay);
+</script>
