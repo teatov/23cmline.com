@@ -1,0 +1,32 @@
+---
+import type { Platform } from '@/lib/socials';
+import Bluesky from '@tabler/icons/outline/brand-bluesky.svg';
+import Discord from '@tabler/icons/outline/brand-discord.svg';
+import GitHub from '@tabler/icons/outline/brand-github.svg';
+import Itch from '@tabler/icons/outline/brand-itch.svg';
+import Steam from '@tabler/icons/outline/brand-steam.svg';
+import Twitter from '@tabler/icons/outline/brand-twitter.svg';
+import VK from '@tabler/icons/outline/brand-vk.svg';
+import YouTube from '@tabler/icons/outline/brand-youtube.svg';
+import Website from '@tabler/icons/outline/link.svg';
+import type { SvgRenderMode } from 'node_modules/astro/dist/assets/utils/svg';
+
+interface Props {
+  platform: Platform;
+  title?: string;
+  size?: number | string;
+  mode?: SvgRenderMode;
+}
+
+const { platform, ...rest } = Astro.props;
+---
+
+{platform === 'Bluesky' && <Bluesky {...rest} />}
+{platform === 'Discord' && <Discord {...rest} />}
+{platform === 'GitHub' && <GitHub {...rest} />}
+{platform === 'Itch.io' && <Itch {...rest} />}
+{platform === 'Steam' && <Steam {...rest} />}
+{platform === 'Twitter' && <Twitter {...rest} />}
+{platform === 'VK' && <VK {...rest} />}
+{platform === 'YouTube' && <YouTube {...rest} />}
+{platform === 'Website' && <Website {...rest} />}
