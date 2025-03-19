@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://23cmline.com',
   build: {
-    assets: 'assets',
+    assets: '_assets',
   },
   // redirects: {
   //   '/': '/en',
