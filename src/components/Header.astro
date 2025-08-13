@@ -7,12 +7,16 @@ import TapeImage from '@/assets/header-tape.png';
 
 <header class="py-6 relative">
   <nav class="container mx-auto max-w-xl flex justify-between">
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <a href="/" class="bouncy inline-block">{SITE_TITLE}</a>
     <div>
       <HeaderLink href="/games">games</HeaderLink>
       <HeaderLink href="/about">about</HeaderLink>
       <HeaderLink href="/blog">blog</HeaderLink>
     </div>
   </nav>
-  <Image src={TapeImage} alt="" class="absolute left-0 right-0 mx-auto mt-2" />
+  <Image
+    src={TapeImage}
+    alt="a measuring tape extended to 23 centimeters"
+    class="absolute left-0 right-0 mx-auto mt-2 pointer-events-none"
+  />
 </header>

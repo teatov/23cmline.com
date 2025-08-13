@@ -40,12 +40,18 @@ body {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border focus:outline-none focus-visible:ring-2 focus-visible:ring-ring;
   }
   body {
     @apply bg-background text-foreground;
   }
   button {
     @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .bouncy {
+    @apply transition-transform duration-50 hover:scale-x-90 hover:scale-y-105 focus-visible:scale-x-90 focus-visible:scale-y-105 active:scale-x-105 active:scale-y-90;
   }
 }
