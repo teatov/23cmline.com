@@ -1,5 +1,6 @@
 ---
 import FormattedDate from '@/components/FormattedDate.astro';
+import SocialButton from '@/components/SocialButton.astro';
 import Layout from '@/layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
@@ -11,11 +12,17 @@ const posts = (await getCollection('blog')).sort(
 
 <Layout title="The 23 Centimetre Blog">
   <section class="section">
+    <h1
+      class="mb-6 flex flex-col items-end justify-between gap-2 text-4xl font-bold md:flex-row md:items-center"
+    >
+      <span class="w-full">The 23 Centimetre Blog</span>
+      <SocialButton socialLink={{ platform: 'rss', href: '/rss.xml' }} />
+    </h1>
     <ul>
       {
         posts.map((post) => (
           <li>
-            <a href={`/blog/${post.id}`} class="block bouncy">
+            <a href={`/blog/${post.id}`} class="bouncy block">
               {post.data.heroImage && <Image src={post.data.heroImage} alt="" />}
               <h4 class="text-4xl font-bold">{post.data.title}</h4>
               <p class="text-muted-foreground">

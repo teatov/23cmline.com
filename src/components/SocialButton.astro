@@ -1,6 +1,7 @@
 ---
 import BlueskyImage from '@/assets/platforms/bluesky.png';
 import GithubImage from '@/assets/platforms/github.png';
+import RssImage from '@/assets/platforms/rss.png';
 import VkImage from '@/assets/platforms/vk.png';
 import WebsiteImage from '@/assets/platforms/website.png';
 import YoutubeImage from '@/assets/platforms/youtube.png';
@@ -26,6 +27,9 @@ switch (socialLink.platform) {
     break;
   case 'youtube':
     platformIcon = YoutubeImage;
+    break;
+  case 'rss':
+    platformIcon = RssImage;
     break;
 }
 ---

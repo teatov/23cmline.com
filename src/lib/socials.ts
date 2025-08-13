@@ -1,4 +1,4 @@
-export type Platform = 'website' | 'bluesky' | 'youtube' | 'vk' | 'github';
+export type Platform = 'website' | 'bluesky' | 'youtube' | 'vk' | 'github' | 'rss';
 
 export type SocialLink = {
   platform: Platform;
