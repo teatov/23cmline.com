@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import CatImage from '@/assets/404.jpg';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="404">
+  <section class="container mx-auto max-w-xl">
+    <Image
+      src={CatImage}
+      alt='a demotivator with a photo of a cat hiding under sheets of paper, with text "404 Not Found"'
+      title="how did we get here?"
+    />
+  </section>
+</Layout>
