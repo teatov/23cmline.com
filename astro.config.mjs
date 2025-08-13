@@ -7,6 +7,10 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://23cmline.com',
+  trailingSlash: 'never',
+  build: {
+    assets: '_assets',
+  },
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
