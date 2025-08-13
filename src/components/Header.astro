@@ -3,13 +3,13 @@ import { SITE_TITLE } from '@/consts';
 import HeaderLink from '@/components/HeaderLink.astro';
 ---
 
-<header>
-  <nav>
+<header class="py-6">
+  <nav class="container mx-auto max-w-xl flex justify-between">
     <h2><a href="/">{SITE_TITLE}</a></h2>
     <div>
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
+      <HeaderLink href="/games">games</HeaderLink>
+      <HeaderLink href="/about">about</HeaderLink>
+      <HeaderLink href="/blog">blog</HeaderLink>
     </div>
   </nav>
 </header>
