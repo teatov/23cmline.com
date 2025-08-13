@@ -9,7 +9,8 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 ---
 
-<a href={href} class:list={["inline-block bouncy", { 'font-bold': isActive }]} {...props}>
-  <span class:list={[{ 'text-transparent': !isActive }]}>&gt;</span><slot
-  /><span class:list={[{ 'text-transparent': !isActive }]}>&lt;</span>
+<a href={href} class:list={['bouncy inline-block', { 'font-bold': isActive }]} {...props}>
+  <span class:list={[{ 'text-transparent': !isActive }]}>&gt;</span><slot /><span
+    class:list={[{ 'text-transparent': !isActive }]}>&lt;</span
+  >
 </a>

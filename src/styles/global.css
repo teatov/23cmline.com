@@ -40,7 +40,7 @@ body {
 
 @layer base {
   * {
-    @apply border-border focus:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+    @apply border-border focus-visible:ring-ring focus:outline-none focus-visible:ring-2;
   }
   body {
     @apply bg-background text-foreground;

@@ -1,8 +1,8 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '@/components/FormattedDate.astro';
 import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -28,7 +28,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       </div>
       <hr />
     </div>
-    <div class="text-justify prose">
+    <div class="prose text-justify">
       <slot />
     </div>
   </article>

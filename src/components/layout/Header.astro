@@ -1,11 +1,11 @@
 ---
-import { Image } from 'astro:assets';
-import { SITE_TITLE } from '@/consts';
-import HeaderLink from '@/components/HeaderLink.astro';
 import TapeImage from '@/assets/header-tape.png';
+import HeaderLink from '@/components/HeaderLink.astro';
+import { SITE_TITLE } from '@/consts';
+import { Image } from 'astro:assets';
 ---
 
-<header class="pt-6 pb-11 sticky top-0 bg-background">
+<header class="bg-background sticky top-0 pt-6 pb-11">
   <nav class="section flex justify-between">
     <a href="/" class="bouncy inline-block">{SITE_TITLE}</a>
     <div>
@@ -17,6 +17,6 @@ import TapeImage from '@/assets/header-tape.png';
   <Image
     src={TapeImage}
     alt="a measuring tape extended to 23 centimeters"
-    class="absolute left-0 right-0 mx-auto mt-2 pointer-events-none"
+    class="pointer-events-none absolute right-0 left-0 mx-auto mt-2"
   />
 </header>
