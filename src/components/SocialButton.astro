@@ -30,7 +30,13 @@ switch (socialLink.platform) {
 }
 ---
 
-<a href={socialLink.href} class="group inline-block" title={socialLink.platform} {...props}>
+<a
+  href={socialLink.href}
+  rel="nofollow, noopener, noreferrer"
+  class="group inline-block"
+  title={socialLink.platform}
+  {...props}
+>
   <Image
     src={platformIcon}
     alt=""
