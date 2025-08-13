@@ -15,7 +15,7 @@ const posts = (await getCollection('blog')).sort(
       {
         posts.map((post) => (
           <li>
-            <a href={`/blog/${post.id}`} class="block">
+            <a href={`/blog/${post.id}`} class="block bouncy">
               {post.data.heroImage && <Image src={post.data.heroImage} alt="" />}
               <h4 class="text-4xl font-bold">{post.data.title}</h4>
               <p class="text-muted-foreground">
