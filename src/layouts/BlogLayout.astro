@@ -10,9 +10,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <Layout title={title} description={description} image={heroImage}>
-  <article>
+  <article class="container mx-auto max-w-xl">
     <div>
-      {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+      {heroImage && <Image src={heroImage} alt="" />}
     </div>
     <div>
       <div>
