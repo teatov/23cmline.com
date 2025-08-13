@@ -15,12 +15,12 @@ const posts = (await getCollection('blog')).sort(
       {
         posts.map((post) => (
           <li>
-            <a href={`/blog/${post.id}/`}>
+            <a href={`/blog/${post.id}/`} class="block">
               {post.data.heroImage && (
                 <Image src={post.data.heroImage} alt="" />
               )}
-              <h4>{post.data.title}</h4>
-              <p>
+              <h4 class="text-4xl font-bold">{post.data.title}</h4>
+              <p class="text-muted-foreground">
                 <FormattedDate date={post.data.pubDate} />
               </p>
             </a>

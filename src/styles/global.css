@@ -48,10 +48,16 @@ body {
   button {
     @apply cursor-pointer;
   }
+  hr {
+    @apply border-2 border-dashed;
+  }
 }
 
 @layer components {
   .bouncy {
     @apply transition-transform duration-50 hover:scale-x-90 hover:scale-y-105 focus-visible:scale-x-90 focus-visible:scale-y-105 active:scale-x-105 active:scale-y-90;
+  }
+  .prose p {
+    @apply [&:not(:first-child)]:mt-6;
   }
 }

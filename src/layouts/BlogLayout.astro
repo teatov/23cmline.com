@@ -11,24 +11,24 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 <Layout title={title} description={description} image={heroImage}>
   <article class="container mx-auto max-w-xl">
-    <div>
+    <div class="mb-6">
       {heroImage && <Image src={heroImage} alt="" />}
-    </div>
-    <div>
-      <div>
-        <div>
+      <h1 class="text-4xl font-bold">{title}</h1>
+      <div class="text-muted-foreground">
+        <em>
           <FormattedDate date={pubDate} />
           {
             updatedDate && (
-              <div>
-                Last updated on <FormattedDate date={updatedDate} />
-              </div>
+              <span>
+                UPD: <FormattedDate date={updatedDate} />
+              </span>
             )
           }
-        </div>
-        <h1>{title}</h1>
-        <hr />
+        </em>
       </div>
+      <hr />
+    </div>
+    <div class="text-justify prose">
       <slot />
     </div>
   </article>
