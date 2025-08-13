@@ -60,4 +60,7 @@ body {
   .prose p {
     @apply [&:not(:first-child)]:mt-6;
   }
+  .section {
+    @apply container mx-auto max-w-xl;
+  }
 }
