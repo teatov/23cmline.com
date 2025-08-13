@@ -1,6 +1,8 @@
 ---
 import AboutHeroImage from '@/assets/blog-placeholder-about.jpg';
+import SocialButton from '@/components/SocialButton.astro';
 import BlogLayout from '@/layouts/BlogLayout.astro';
+import { TEATOV_SOCIALS } from '@/lib/socials';
 ---
 
 <BlogLayout
@@ -19,5 +21,14 @@ import BlogLayout from '@/layouts/BlogLayout.astro';
       vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
       sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
     </p>
+    <ul class="flex gap-2">
+      {
+        TEATOV_SOCIALS.map((socialLink) => (
+          <li>
+            <SocialButton socialLink={socialLink} />
+          </li>
+        ))
+      }
+    </ul>
   </section>
 </BlogLayout>

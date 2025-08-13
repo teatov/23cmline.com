@@ -1,0 +1,39 @@
+---
+import BlueskyImage from '@/assets/platforms/bluesky.png';
+import GithubImage from '@/assets/platforms/github.png';
+import VkImage from '@/assets/platforms/vk.png';
+import WebsiteImage from '@/assets/platforms/website.png';
+import YoutubeImage from '@/assets/platforms/youtube.png';
+import type { SocialLink } from '@/lib/socials';
+import type { HTMLAttributes } from 'astro/types';
+import { Image } from 'astro:assets';
+
+type Props = HTMLAttributes<'a'> & { socialLink: SocialLink };
+
+const { socialLink, ...props } = Astro.props;
+
+let platformIcon = WebsiteImage;
+
+switch (socialLink.platform) {
+  case 'bluesky':
+    platformIcon = BlueskyImage;
+    break;
+  case 'github':
+    platformIcon = GithubImage;
+    break;
+  case 'vk':
+    platformIcon = VkImage;
+    break;
+  case 'youtube':
+    platformIcon = YoutubeImage;
+    break;
+}
+---
+
+<a href={socialLink.href} class="group inline-block" title={socialLink.platform} {...props}>
+  <Image
+    src={platformIcon}
+    alt=""
+    class="size-6 transition-transform duration-50 group-hover:rotate-12 group-focus-visible:rotate-12 group-active:rotate-[-45deg]"
+  />
+</a>
