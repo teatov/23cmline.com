@@ -1,9 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 import { SITE_TITLE } from '@/consts';
 import HeaderLink from '@/components/HeaderLink.astro';
+import TapeImage from '@/assets/header-tape.png';
 ---
 
-<header class="py-6">
+<header class="py-6 relative">
   <nav class="container mx-auto max-w-xl flex justify-between">
     <h2><a href="/">{SITE_TITLE}</a></h2>
     <div>
@@ -12,4 +14,5 @@ import HeaderLink from '@/components/HeaderLink.astro';
       <HeaderLink href="/blog">blog</HeaderLink>
     </div>
   </nav>
+  <Image src={TapeImage} alt="" class="absolute left-0 right-0 mx-auto mt-2" />
 </header>
